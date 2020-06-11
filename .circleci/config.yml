@@ -59,6 +59,8 @@ jobs:
           command: php artisan serve
           background: true
       - run: vendor/bin/phpunit
+      - run: chromedriver -v
+      - run: ./vendor/laravel/dusk/bin/chromedriver-linux -v
       - run:
           name: Start Chrome Driver
           command: ./vendor/laravel/dusk/bin/chromedriver-linux
